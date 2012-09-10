@@ -14,11 +14,6 @@ body{
   position: relative;
   outline: 1px solid #CCC;
 }
-.map-bg{
-	position:absolute;
-}
-#MapBig,#map,#player{
+.map-item{
   position:absolute;
-  left:0px;
-  top:0px;
 }
