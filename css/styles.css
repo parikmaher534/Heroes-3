@@ -7,12 +7,12 @@ body{
 }
 
 #Game{
-  width:800px;
-  height:500px;
+  width:288px;
+  height:224px;
   margin:20px auto;
   overflow:hidden;
   position: relative;
-  outline: 1px solid #CCC;
+  outline: 1px solid #777;
 }
 .map-item{
   position:absolute;
