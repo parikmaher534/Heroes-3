@@ -1,6 +1,10 @@
 //Game initialiation point
 Heroes.init = (function(){
   
+  var th          = this;
+      th.MAPMODEL = [];
+  
+  
   //On page load start call modules
   window.addEventListener("load", function(){
       
@@ -8,13 +12,13 @@ Heroes.init = (function(){
       Heroes.GAMEEL = document.getElementById("Game");
       Heroes.MAPEL  = document.getElementById("Map");
       
-      
       //On all resources load
       Heroes.Preload(function(){
-          Heroes.MapGenerator();
+          Heroes.MapGenerator(th.MAPMODEL);
       });
       
   }, false);
+  
 }());
 
 
