@@ -1,5 +1,7 @@
 Heroes.MapGenerator = (function(mpmodel){
   
+  "use strict";
+  
   var items     = Heroes.MAP.background,
       itemsLn   = items.length,
       objects   = Heroes.MAP.objects,
@@ -15,6 +17,7 @@ Heroes.MapGenerator = (function(mpmodel){
   this.createBlock = function(o, cls){
     el = document.createElement("div");
     el.className = cls;
+    el.id = "x"+o.x+"y"+o.y;
     params = "background-image:url("+resources[o.s]+");width:"+o.w+"px;height:"+o.h+"px;top:"+o.y+"px;left:"+o.x+"px";
     el.setAttribute("style", params);
     Heroes.MAPEL.appendChild(el);
@@ -76,5 +79,4 @@ Heroes.MapGenerator = (function(mpmodel){
     this.setPropToMap(players[p]);
   };
   
-  console.log(mpmodel);
 });

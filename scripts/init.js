@@ -1,7 +1,9 @@
 //Game initialiation point
-Heroes.init = (function(){
+Heroes.init = (function(scope){
   
-  var th          = this;
+  "use strict";
+  
+  var th          = scope;
       th.MAPMODEL = [];
   
   
@@ -14,12 +16,16 @@ Heroes.init = (function(){
       
       //On all resources load
       Heroes.Preload(function(){
+        
           Heroes.MapGenerator(th.MAPMODEL);
+          
+          //Test path finding
+          Heroes.FindPath(th.MAPMODEL);
       });
       
   }, false);
   
-}());
+}(this));
 
 
 /**
