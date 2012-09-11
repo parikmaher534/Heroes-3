@@ -23,7 +23,8 @@ Heroes.config = {
     "bg18": "images/bg/tgrs001-l-b.png",
     "obj1": "images/bg/AVXcrsd0.png",
     "obj2": "images/bg/tree.png",
-    "obj3": "images/bg/AVXmn1y3.png"
+    "obj3": "images/bg/AVXmn1y3.png",
+    "pl1": "images/bg/player.png"
   }
 };
 

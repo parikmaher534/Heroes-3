@@ -4,11 +4,13 @@ Heroes.MapGenerator = (function(mpmodel){
       itemsLn   = items.length,
       objects   = Heroes.MAP.objects,
       objectsLn = objects.length,
+      players   = Heroes.MAP.players,
       resources = Heroes.config.resources,
       el        = null,
       params    = null,
       elCls     = "map-item",
-      objCls    = "map-object";
+      objCls    = "map-object",
+      plCls     = "map-player";
   
   this.createBlock = function(o, cls){
     el = document.createElement("div");
@@ -66,6 +68,12 @@ Heroes.MapGenerator = (function(mpmodel){
   for( var o = 0; o < objectsLn; o++ ){
     this.createBlock(objects[o], objCls);
     this.setPropToMap(objects[o]);
+  };
+  
+  //Set players
+  for( var p in players ){
+    this.createBlock(players[p], plCls);
+    this.setPropToMap(players[p]);
   };
   
   console.log(mpmodel);

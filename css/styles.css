@@ -8,15 +8,12 @@ body{
 
 #Game{
   width:352px;
-  height:256px;
+  height:288px;
   margin:20px auto;
   overflow:hidden;
   position: relative;
   outline: 1px solid #777;
 }
-.map-item, .map-object{
+.map-item, .map-object, .map-player{
   position:absolute;
-}
-.map-object{
-  cursor:pointer;
 }
