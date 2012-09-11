@@ -7,8 +7,8 @@ body{
 }
 
 #Game{
-  width:288px;
-  height:224px;
+  width:352px;
+  height:256px;
   margin:20px auto;
   overflow:hidden;
   position: relative;

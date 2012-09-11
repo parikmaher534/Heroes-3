@@ -43,7 +43,16 @@ Heroes.MapGenerator = (function(mpmodel){
    * Set rights properties for map model
    */
   this.setPropToMap = function(o){
-    
+    var x   = o.x / Heroes.MAP.size.minW,
+        row = o.y / Heroes.MAP.size.minH;
+        
+    if( mpmodel[row][x] != o.p ){
+      for( var i = 0; i < o.w / Heroes.MAP.size.minW; i++ ){
+        for( var j = 0; j < o.h / Heroes.MAP.size.minH; j++ ){
+          mpmodel[row+j][x + i] = o.p;
+        };
+      };
+    };
   };
   
   
@@ -56,6 +65,8 @@ Heroes.MapGenerator = (function(mpmodel){
   //Set objects
   for( var o = 0; o < objectsLn; o++ ){
     this.createBlock(objects[o], objCls);
+    this.setPropToMap(objects[o]);
   };
   
+  console.log(mpmodel);
 });
