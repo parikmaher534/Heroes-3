@@ -17,3 +17,12 @@ body{
 .map-item, .map-object, .map-player{
   position:absolute;
 }
+#path-check{
+  position:absolute;
+  width:352px;
+  height:288px;
+  background: #FFF;
+  border:1px solid #FFF;
+  top:5px;
+  left:5px;
+}
