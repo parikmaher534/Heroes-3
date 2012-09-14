@@ -52,11 +52,12 @@ Heroes.MapGenerator = (function(mpmodel){
         row = o.y / Heroes.MAP.size.minH;
         
     if( mpmodel[row][x] != o.p ){
-      for( var i = 0; i < o.w / Heroes.MAP.size.minW; i++ ){
-        for( var j = 0; j < o.h / Heroes.MAP.size.minH; j++ ){
-          mpmodel[row+j][x + i] = o.p;
-        };
-      };
+      //for( var i = 0; i < o.w / Heroes.MAP.size.minW; i++ ){
+        //for( var j = 0; j < o.h / Heroes.MAP.size.minH; j++ ){
+          //mpmodel[row+j][x + i] = o.p;
+        //};
+      //};
+      mpmodel[row][x] = o.p;
     };
   };
   
